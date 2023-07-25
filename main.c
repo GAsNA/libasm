@@ -10,6 +10,7 @@
 void	_hw();
 int		ft_strlen(char const *str);
 char	*ft_strcpy(char *dst, char const *src);
+int		ft_strcmp(char const *s1, char const *s2);
 
 int main()
 {
@@ -40,6 +41,15 @@ int main()
 	printf("'%s' (empty)\n", ft_strcpy(buffer, ""));
 	printf("'%s' ('long message')\n", ft_strcpy(buffer, "long message"));
 	printf("'%s' (NULL > not modified)\n", ft_strcpy(buffer, NULL));
+	printf("\n");
+
+	printf("<----------------- STRCMP ----------------->\n");
+	STRCMP("", "")
+	STRCMP("toto", "toto")
+	STRCMP("", "toto")
+	STRCMP("toto", "")
+	STRCMP("toto", "totobar")
+	STRCMP("totobar", "toto")
 	printf("\n");
 
 	return 0;
