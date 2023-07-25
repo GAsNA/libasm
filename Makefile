@@ -7,7 +7,8 @@ FILES = _hw.s		\
 		ft_strlen.s	\
 		ft_strcpy.s	\
 		ft_strcmp.s	\
-		ft_write.s
+		ft_write.s	\
+		ft_read.s
 
 SRC = $(addprefix $(SRC_PATH), $(FILES))
 OBJ = $(addprefix $(OBJ_PATH), $(FILES:.s=.o))
@@ -34,6 +35,6 @@ fclean: clean
 re: fclean all
 
 run: all
-	clang main.c libasm.a && ./a.out
+	clang main.c libasm.a && ./a.out < test_file.txt
 
 .PHONY: all, clean, fclean, re

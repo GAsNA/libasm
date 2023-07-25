@@ -13,11 +13,13 @@ int		ft_strlen(char const *str);
 char	*ft_strcpy(char *dst, char const *src);
 int		ft_strcmp(char const *s1, char const *s2);
 ssize_t	ft_write(int fd, void const *buf, size_t nbyte);
+ssize_t	ft_read(int fd, void *buf, size_t nbyte);
 
 int main()
 {
 	// INIT
 	char	buffer[100];
+	ssize_t	r;
 
 	int	i = 0;
 	while (i < 100)
@@ -59,6 +61,15 @@ int main()
 	WRITE("totototo", 4L)
 	WRITE("totototo", 8L)
 	WRITE("toto", 2L)
+	printf("\n");
+
+	printf("<----------------- READ ----------------->\n");
+	READ(buffer, 50)
+	READ(buffer, 25)
+	READ(buffer, 4)
+	READ(buffer, 26)
+	READ(buffer, 14)
+	READ(buffer, 0)
 	printf("\n");
 
 	return 0;
