@@ -6,7 +6,8 @@ OBJ_PATH = ./obj/
 FILES = _hw.s		\
 		ft_strlen.s	\
 		ft_strcpy.s	\
-		ft_strcmp.s
+		ft_strcmp.s	\
+		ft_write.s
 
 SRC = $(addprefix $(SRC_PATH), $(FILES))
 OBJ = $(addprefix $(OBJ_PATH), $(FILES:.s=.o))

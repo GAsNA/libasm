@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <unistd.h>
 
 #define STRLEN(x)			printf("'%s' = %d (%d)\n", x, ft_strlen(x), (int)strlen(x));
 #define STRCMP(a, b)		printf("'%s':'%s' = %d (%d)\n", a, b, ft_strcmp(a, b), strcmp(a, b));
@@ -11,6 +12,7 @@ void	_hw();
 int		ft_strlen(char const *str);
 char	*ft_strcpy(char *dst, char const *src);
 int		ft_strcmp(char const *s1, char const *s2);
+ssize_t	ft_write(int fd, void const *buf, size_t nbyte);
 
 int main()
 {
@@ -50,6 +52,13 @@ int main()
 	STRCMP("toto", "")
 	STRCMP("toto", "totobar")
 	STRCMP("totobar", "toto")
+	printf("\n");
+
+	printf("<----------------- WRITE ----------------->\n");
+	WRITE("toto", 4L)
+	WRITE("totototo", 4L)
+	WRITE("totototo", 8L)
+	WRITE("toto", 2L)
 	printf("\n");
 
 	return 0;
