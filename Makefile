@@ -3,8 +3,9 @@ NAME = libasm.a
 SRC_PATH = ./src/
 OBJ_PATH = ./obj/
 
-FILES = _hw.s	\
-		ft_strlen.s
+FILES = _hw.s		\
+		ft_strlen.s	\
+		ft_strcpy.s
 
 SRC = $(addprefix $(SRC_PATH), $(FILES))
 OBJ = $(addprefix $(OBJ_PATH), $(FILES:.s=.o))
@@ -23,11 +24,14 @@ $(OBJ_PATH)%.o:	$(SRC_PATH)%.s
 	$(NASM) -o $@ $<
 
 clean:
-	rm -rf $(OBJ_PATH)
+	rm -rf $(OBJ_PATH) a.out
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+run: all
+	clang main.c libasm.a && ./a.out
 
 .PHONY: all, clean, fclean, re

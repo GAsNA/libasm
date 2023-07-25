@@ -9,9 +9,17 @@
 
 void	_hw();
 int		ft_strlen(char const *str);
+char	*ft_strcpy(char *dst, char const *src);
 
 int main()
 {
+	// INIT
+	char	buffer[100];
+
+	int	i = 0;
+	while (i < 100)
+		buffer[i++] = 0;
+
 	// HELLO WORLD
 	printf("<----------------- HELLO WORLD ----------------->\n");
 	_hw();
@@ -25,6 +33,13 @@ int main()
 	STRLEN("0123456789abcdef")
 	STRLEN("42")
 	STRLEN("1")
+	printf("\n");
+	
+	printf("<----------------- STRCPY ----------------->\n");
+	printf("'%s' ('toto')\n", ft_strcpy(buffer, "toto"));
+	printf("'%s' (empty)\n", ft_strcpy(buffer, ""));
+	printf("'%s' ('long message')\n", ft_strcpy(buffer, "long message"));
+	printf("'%s' (NULL > not modified)\n", ft_strcpy(buffer, NULL));
 	printf("\n");
 
 	return 0;
