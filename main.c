@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
 
@@ -14,12 +15,15 @@ char	*ft_strcpy(char *dst, char const *src);
 int		ft_strcmp(char const *s1, char const *s2);
 ssize_t	ft_write(int fd, void const *buf, size_t nbyte);
 ssize_t	ft_read(int fd, void *buf, size_t nbyte);
+char	*ft_strdup(char const *s1);
 
 int main()
 {
 	// INIT
 	char	buffer[100];
 	ssize_t	r;
+	char	*tmp;
+	char	*tmp2;
 
 	int	i = 0;
 	while (i < 100)
@@ -70,6 +74,15 @@ int main()
 	READ(buffer, 26)
 	READ(buffer, 14)
 	READ(buffer, 0)
+	printf("\n");
+
+	printf("<----------------- STRDUP ----------------->\n");
+	tmp2 = ft_strdup("toto");
+	DUP(tmp2)
+	free(tmp2);
+	DUP("totobar")
+	DUP("long message")
+	DUP("")
 	printf("\n");
 
 	return 0;
