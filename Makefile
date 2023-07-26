@@ -38,7 +38,4 @@ re: fclean all
 run: all
 	clang main.c libasm.a && ./a.out < test_file.txt
 
-debug: all
-	clang -g main.c libasm.a && lldb ./a.out
-
 .PHONY: all, clean, fclean, re
