@@ -10,7 +10,7 @@ Compile the library with ``make``. Compile and run with the main test with ``mak
 - ft_strcmp (man 3 strcmp)
 - ft_write (man 2 write)
 - ft_read (man 2 read)
-- ft_strdup (man 3 strdup, you can call to malloc)
+- ft_strdup (man 3 strdup)
 
 ## Author
 [![rleseur's 42 stats](https://badge42.vercel.app/api/v2/cl7s08vet00110gmnrmm2benl/stats?cursusId=21&coalitionId=45)](https://github.com/JaeSeoKim/badge42)
