@@ -3,8 +3,7 @@ NAME = libasm.a
 SRC_PATH = ./src/
 OBJ_PATH = ./obj/
 
-FILES = _hw.s		\
-		ft_strlen.s	\
+FILES = ft_strlen.s	\
 		ft_strcpy.s	\
 		ft_strcmp.s	\
 		ft_write.s	\

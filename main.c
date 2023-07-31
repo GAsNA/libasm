@@ -9,7 +9,6 @@
 #define READ(b, x)			r = ft_read(STDIN_FILENO, buffer, x); printf("'%s':%ld\n", buffer, r);
 #define DUP(s)				tmp = ft_strdup(s); printf("'%s' ('%s')\n", tmp, s); free(tmp); tmp = NULL;
 
-void	_hw();
 int		ft_strlen(char const *str);
 char	*ft_strcpy(char *dst, char const *src);
 int		ft_strcmp(char const *s1, char const *s2);
@@ -28,11 +27,6 @@ int main()
 	int	i = 0;
 	while (i < 100)
 		buffer[i++] = 0;
-
-	// HELLO WORLD
-	printf("<----------------- HELLO WORLD ----------------->\n");
-	_hw();
-	printf("\n");
 
 	// STRLEN
 	printf("<----------------- STRLEN ----------------->\n");
