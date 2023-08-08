@@ -4,6 +4,12 @@ Small assembly library. The goal of this project is to become familiar with the 
 <br />
 Compile the library with ``make``. Compile and run with the main test with ``make run``.
 
+[![rleseur's 42 libasm Score](https://badge42.vercel.app/api/v2/cl7s08vet00110gmnrmm2benl/project/3208808)](https://github.com/JaeSeoKim/badge42)
+
+<div align="right">
+  <h4>Validated: 07/08/2023</h4>
+</div>
+
 ## Functions
 - ft_strlen (man 3 strlen)
 - ft_strcpy (man 3 strcpy)
@@ -32,3 +38,6 @@ Compile the library with ``make``. Compile and run with the main test with ``mak
     </td>
   </tr>
 </table>
+
+## Badges
+![C Badge](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
